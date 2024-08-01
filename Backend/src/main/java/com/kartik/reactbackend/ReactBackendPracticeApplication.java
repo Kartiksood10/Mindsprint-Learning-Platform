@@ -1,4 +1,4 @@
-package com.swapnil.reactbackend;
+package com.kartik.reactbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
