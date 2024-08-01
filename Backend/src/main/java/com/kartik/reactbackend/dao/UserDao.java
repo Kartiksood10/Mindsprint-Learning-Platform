@@ -9,6 +9,5 @@ import com.kartik.reactbackend.pojo.User;
 @Repository
 public interface UserDao extends JpaRepository<User, Integer> {
 
-	// get user details by username
 	User findByUserid(String userid);
 }

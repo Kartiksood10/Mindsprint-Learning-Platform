@@ -22,16 +22,15 @@ public class CourseController {
 	@Autowired
 	private CourseService courseService;
 
-	@PostMapping("/addcourse")
+	@PostMapping("/addCourse")
 	public ResponseEntity<String> addCourse(@RequestBody CourseDetails courseDetails) {
 		       
 		CourseDetails addedCourse = courseService.addCourse(courseDetails);
 		           
 		
 		if(addedCourse != null) {
-            // Replace this condition with your actual validation logic
 		   System.out.println("Course Created :: " + addedCourse );
-            return new ResponseEntity<>("Course Addition successfull", HttpStatus.OK);
+            return new ResponseEntity<>("Course Addition successful", HttpStatus.OK);
         } 
 		else {
 			System.out.println("Something went wrong");
@@ -39,7 +38,7 @@ public class CourseController {
         }
        }
 	
-	@GetMapping("/getall")
+	@GetMapping("/getAll")
 	  public ResponseEntity<List<CourseDetails>> getallCourses() {
 	    List<CourseDetails> allCourseDetails = courseService.getAllCourseDetails();
 	    if (allCourseDetails.isEmpty()) {

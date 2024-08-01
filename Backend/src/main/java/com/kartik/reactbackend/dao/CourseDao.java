@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.kartik.reactbackend.pojo.CourseDetails;
 
 @Repository
-public interface CouseDao extends JpaRepository<CourseDetails, Integer> {
+public interface CourseDao extends JpaRepository<CourseDetails, Integer> {
 
 }

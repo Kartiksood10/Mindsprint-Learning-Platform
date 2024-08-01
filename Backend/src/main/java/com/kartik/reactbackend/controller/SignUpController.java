@@ -16,7 +16,7 @@ import com.kartik.reactbackend.service.ValidateLoginService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/demo")
+@RequestMapping("/api")
 public class SignUpController {
 
 	@Autowired
@@ -25,11 +25,6 @@ public class SignUpController {
 	@Autowired
 	private ValidateLoginService validateLoginService;
 	
-	@GetMapping("/test")
-	public String test() {
-		return "Hello world";
-	}
-	
 	@PostMapping("/signUp")
 	public ResponseEntity<String> saveUser(@RequestBody User user) {
 		          
@@ -37,7 +32,6 @@ public class SignUpController {
 		      System.out.println("Created New User :: "+ savedUser);
 		
 		 if (savedUser!= null) {
-	            // Replace this condition with your actual validation logic
 			   System.out.println("User Created :: "+ savedUser);
 	            return new ResponseEntity<>("Signup successful", HttpStatus.OK);
 	        } else {
@@ -52,11 +46,11 @@ public class SignUpController {
 		User validateLogin = validateLoginService.validateLogin(user);
 		
 		if(validateLogin !=null && validateLogin.getPassword().equals(user.getPassword())) {
-			System.out.println("Login Successfull ::"+ user.getUserid());
-			return new ResponseEntity<String>("Login Successfull", HttpStatus.OK);
+			System.out.println("Login Successful ::"+ user.getUserid());
+			return new ResponseEntity<String>("Login Successful", HttpStatus.OK);
 		}
 		else {
-			return new ResponseEntity<String>("Loginn Fail,", HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<String>("Login Fail,", HttpStatus.UNAUTHORIZED);
 		}
 		
 	}

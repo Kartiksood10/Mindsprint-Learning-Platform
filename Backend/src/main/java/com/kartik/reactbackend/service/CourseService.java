@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kartik.reactbackend.dao.CouseDao;
+import com.kartik.reactbackend.dao.CourseDao;
 import com.kartik.reactbackend.pojo.CourseDetails;
 
 @Service
 public class CourseService {
 
 	@Autowired
-	private CouseDao courseDao;
+	private CourseDao courseDao;
 	
 	public CourseDetails addCourse(CourseDetails courseDetails) {
 		
