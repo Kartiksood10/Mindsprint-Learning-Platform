@@ -1,10 +1,10 @@
-package com.swapnil.reactbackend.service;
+package com.kartik.reactbackend.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.swapnil.reactbackend.dao.UserDao;
-import com.swapnil.reactbackend.pojo.User;
+import com.kartik.reactbackend.dao.UserDao;
+import com.kartik.reactbackend.pojo.User;
 
 @Service
 public class CreateUserService {

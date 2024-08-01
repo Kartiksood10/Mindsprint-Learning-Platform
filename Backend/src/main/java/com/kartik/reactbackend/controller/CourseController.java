@@ -1,4 +1,4 @@
-package com.swapnil.reactbackend.controller;
+package com.kartik.reactbackend.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.swapnil.reactbackend.pojo.CourseDetails;
-import com.swapnil.reactbackend.service.CourseService;
+import com.kartik.reactbackend.pojo.CourseDetails;
+import com.kartik.reactbackend.service.CourseService;
 
 @RestController
 @CrossOrigin

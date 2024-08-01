@@ -1,4 +1,4 @@
-package com.swapnil.reactbackend.controller;
+package com.kartik.reactbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.swapnil.reactbackend.pojo.User;
-import com.swapnil.reactbackend.service.CreateUserService;
-import com.swapnil.reactbackend.service.ValidateLoginService;
+import com.kartik.reactbackend.pojo.User;
+import com.kartik.reactbackend.service.CreateUserService;
+import com.kartik.reactbackend.service.ValidateLoginService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")

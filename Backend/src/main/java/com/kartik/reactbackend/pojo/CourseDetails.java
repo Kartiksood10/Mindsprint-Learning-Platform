@@ -1,4 +1,4 @@
-package com.swapnil.reactbackend.pojo;
+package com.kartik.reactbackend.pojo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

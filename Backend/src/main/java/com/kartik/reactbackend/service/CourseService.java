@@ -1,12 +1,12 @@
-package com.swapnil.reactbackend.service;
+package com.kartik.reactbackend.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.swapnil.reactbackend.dao.CouseDao;
-import com.swapnil.reactbackend.pojo.CourseDetails;
+import com.kartik.reactbackend.dao.CouseDao;
+import com.kartik.reactbackend.pojo.CourseDetails;
 
 @Service
 public class CourseService {
