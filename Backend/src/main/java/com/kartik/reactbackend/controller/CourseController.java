@@ -5,12 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.kartik.reactbackend.pojo.CourseDetails;
 import com.kartik.reactbackend.service.CourseService;
 
@@ -47,4 +42,26 @@ public class CourseController {
 	        return new ResponseEntity<>(allCourseDetails, HttpStatus.OK);
 	    }
        }
+
+	   @PutMapping("/updateCourse/{id}")
+		public ResponseEntity<CourseDetails> updateCourse(@RequestBody CourseDetails courseDetails, @PathVariable int id){
+
+			CourseDetails updatedCourse = courseService.updateCourse(courseDetails,id);
+			return new ResponseEntity<>(updatedCourse, HttpStatus.OK);
+
+	   }
+
+		@DeleteMapping("/deleteCourse/{id}")
+		public Object deleteById(@PathVariable int id){
+
+			if(courseService.deleteCourse(id)){
+
+				return "Course deleted";
+			}
+			else{
+
+				return "Data not found";
+			}
+		}
+
 }

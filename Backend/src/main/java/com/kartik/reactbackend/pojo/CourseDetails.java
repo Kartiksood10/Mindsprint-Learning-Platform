@@ -1,9 +1,9 @@
 package com.kartik.reactbackend.pojo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class CourseDetails {
@@ -18,6 +18,16 @@ public class CourseDetails {
 	private String courseauthor;
 	
 	private String url;
+	@ManyToMany(mappedBy = "courses")
+	private Set<User> users=new HashSet<>();
+
+	public Set<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}
 
 	public int getId() {
 		return id;
