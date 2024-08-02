@@ -18,6 +18,7 @@ public class User {
 	
 	private String password;
 
+
 	@ManyToMany
 	@JoinTable(
 			name = "user_course",
@@ -65,4 +66,6 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+
 }

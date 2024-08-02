@@ -20,4 +20,11 @@ public class CreateUserService {
 		
 	}
 
+//	public void makeAdmin(Long id) {
+//		User found= UserDao.findById(id).orElse(null);
+//		if(found!=null){
+//			found.setRole(true);
+//			UserDao.save(found);
+//		}
+//	}
 }
