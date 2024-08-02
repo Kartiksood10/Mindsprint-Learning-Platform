@@ -49,9 +49,9 @@ public class SignUpController {
 		}
 		
 	}
-//	@GetMapping("/makeadmin/{id}")
-//	public ResponseEntity<String> makeAdmin(@PathVariable Long id){
-//		createUserService.makeAdmin(id);
-//		return new ResponseEntity<>("Role Updated",HttpStatus.OK);
-//	}
+	@GetMapping("/makeAdmin/{id}")
+	public ResponseEntity<String> makeAdmin(@PathVariable int id){
+		validateLoginService.makeAdmin(id);
+		return new ResponseEntity<>("Role Updated",HttpStatus.OK);
+	}
 }

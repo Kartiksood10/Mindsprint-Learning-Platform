@@ -35,7 +35,7 @@ public class CourseService {
 		if (existingCourse != null) {
 			// Update relevant fields (assuming not all fields need update)
 			existingCourse.setCoursename(courseDetails.getCoursename());
-			existingCourse.setUrl(courseDetails.getUrl());
+			//existingCourse.setUrl(courseDetails.getUrl());
 
 			// Save the updated entity
 			return courseDao.save(existingCourse);

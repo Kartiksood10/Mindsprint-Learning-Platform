@@ -17,4 +17,12 @@ public class ValidateLoginService {
 		return findByUserid;
 		
 	}
+
+	public void makeAdmin(int id) {
+		User found=userDao.findById(id).orElse(null);
+		if(found!=null){
+			found.setRole(true);
+			userDao.save(found);
+		}
+	}
 }

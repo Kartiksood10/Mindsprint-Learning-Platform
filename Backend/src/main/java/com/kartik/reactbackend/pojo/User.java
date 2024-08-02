@@ -18,6 +18,8 @@ public class User {
 	
 	private String password;
 
+	@Column(columnDefinition = "BOOLEAN DEFAULT false")
+	private boolean role;
 
 	@ManyToMany
 	@JoinTable(
@@ -67,5 +69,11 @@ public class User {
 		this.password = password;
 	}
 
+	public boolean isRole() {
+		return role;
+	}
 
+	public void setRole(boolean role) {
+		this.role = role;
+	}
 }

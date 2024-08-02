@@ -10,7 +10,7 @@ import com.kartik.reactbackend.pojo.CourseDetails;
 import com.kartik.reactbackend.service.CourseService;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/course")
 public class CourseController {
 	
